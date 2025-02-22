@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #d9d6dd;
+    color: #ad9e9b;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 2%; /* for header buttons */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px; /* Increases space between buttons */
+    
+}
+
+.logo{
+    width: 140px;
+    position: absolute;
+    top: 30px;  /* Adjust the distance from the top */
+    left: 50px; /* Adjust the distance from the left */
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 30px 10px;
+    
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #8eafce;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative; /* Ensures movement happens within its own space */
+    transition: all 0.3s ease-in-out;
+
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #8eafce;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    background: #6d92b5; /* Slightly darker color on hover */
+    transform: translateY(-3px); /* Moves button up slightly */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 12%;
+    font-size: 30px;
+    color: #ad9e9b;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #8eafce;
+}
+/*---------------------about-----------------------*/
+#about{
+    padding: 80px 0;
+    color: #978581;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #6d92b5;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px  40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#26445f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li {
+    display: flex; /* Aligns label and text in a straight line */
+    align-items: baseline; /* Keeps text aligned properly */
+    gap: 8px; /* Adds spacing between label and text */
+}
+
+
+.tab-contents ul li span{
+    display: block; /* Forces "Software & Tools:" to be on its own line */
+    font-weight: bold; /* Optional: Makes the label stand out */
+    color:#4a81b4;
+    margin: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+

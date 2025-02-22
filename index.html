@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta HTTP-EQUIV="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerleen Santiago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Virtual Assistant | Data Analyst | Systems Specialist</p>
+            <h1>Hi, I'm <span>Emerleen Santiago</span><br>from the Philippines</h1>
+        </div>
+    </div>
+</div>
+<!-----------about--------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a Computer Engineering graduate with certifications in Google Data Analytics & Google Ads Search. 
+                    I specialize in data management, process automation, administrative support, and system integration. 
+                    With experience in real estate transactions, POS setup, and team data management, 
+                    I can confidently provide efficient virtual assistance to businesses looking to streamline their operations.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+                    <p class="tab-links" onclick="opentab('education', event)">Education</p>
+
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Software & Tools:</span>Google Suite, Excel, Notion, Canva, CapCut, Filmora</li>
+                        <li><span>Programming:</span>JavaScript, Java, MySQL,HTML</li>
+                        <li><span>Data Entry & Process Automation</span></li>
+                        <li><span>Documentation & Workflow Improvement</span></li>
+                        <li><span>POS & System Integration</span></li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Data Entry Machine Operator</span>2025 Makati City Hall</li>
+                        <li><span>System Analyst and Data Manager</span>2024 Golden Empire Summit Life Insurance Agency</li>
+                        <li><span>POS and Systems Integration Specialist</span>2024 Freelance</li>
+                        <li><span>Real Estate Broker Support</span>2022-2024 Freelance</li>
+                        <li><span>Data Management Assistant</span>2019 Gerona Hospital of Sacred Heart</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Philippine Christian University</span>2020-2024 Bachelor of Science in Computer Engineering</li>
+                        <li><span>Gerona Junior College</span>2019-2020 S.T.E.M</li>
+                        <li><span>Makati High School</span>2014-2019</li>
+                        <li><span>Makati Elementary School</span>2008-2014</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname, event){
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    for (let tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for (let tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+</script>
+
+</body>
+</html>
